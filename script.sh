@@ -4,7 +4,7 @@
 function genUser{
     for i in {01..30}
     do
-        sudo adduser $1_$i $1
+        sudo addsuser $1_$i $1
         #adduser automatically creates home directory
         #unlike useradd
     done

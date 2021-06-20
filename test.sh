@@ -1,12 +1,15 @@
 #!/bin/bash
 
-#./attendance.sh > ut.txt
+# Ignore this file, used for testing purpose
 
 
-#getting 1st occurance line no of the date1
-start=$(grep -n $date1 attendance.log | head -1 | cut -d':' -f 1)
-#getting last occurance line no of the date2
-end=$(grep -n $date1 attendance.log | tail -1 | cut -d':' -f 1)
+function genUser {
+    for i in {01..30}
+    do
+        echo $1_$i $1
+        #adduser automatically creates home directory
+        #unlike useradd
+    done
+}
 
-echo $start
-echo $end
+genUser ak
