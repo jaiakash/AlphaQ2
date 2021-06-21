@@ -27,7 +27,7 @@ do
 done < attendance.log
 
 #Creates a file to home directory
-fle=/home/tanu/$dt.txt
+fle="/scripts/$dt.txt"
 touch $fle
 
 #Write message to mom file
