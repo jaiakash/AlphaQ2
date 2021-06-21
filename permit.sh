@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #function to copy schedule file to each user's directory
-function permit{
+permit() {
     for i in {01..30}
     do
         if [ $i -le 11 ]
