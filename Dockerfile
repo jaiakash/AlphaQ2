@@ -21,5 +21,5 @@ RUN apt-get install -y binutils
 RUN bash ./genUser.sh
 RUN bash ./permit.sh
 RUN bash ./schedule.sh
-#RUN bash ./attendance.sh 2019-12-12 2020-03-16
-#RUN bash ./genMoM.sh 2020-07-16
+RUN bash ./attendance.sh 2019-12-12 2020-03-16
+RUN bash ./genMoM.sh 2020-07-16
