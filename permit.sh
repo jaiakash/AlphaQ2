@@ -7,7 +7,7 @@ permit() {
         if [ $i -le 11 ]
         then
             #Adding to group
-            sudo adduser $1_$i $2_secondyr
+            sudo usermod -a -G $2_secondyr $1_$i 
 
             #Adding read and execute permisiion for head as well as seniors
             setfacl -dm g:$2_thirdyr:r-x /home/$1_$i
@@ -15,14 +15,14 @@ permit() {
             setfacl -dm u:jay_jay:r-x /home/$1_$i
         elif [ $i -le 21 ]
         then
-            sudo adduser $1_$i $2_thirdyr
+            sudo usermod -a -G $2_thirdyr $1_$i
 
             #Adding read and execute permisiion for head as well as seniors
             setfacl -dm g:$2_fourthyr:r-x /home/$1_$i
             setfacl -dm u:jay_jay:r-x /home/$1_$i
         elif [ $i -le 31 ]
         then
-            sudo adduser $1_$i $2_fourthyr
+            sudo usermod -a -G $2_fourthyr $1_$i
 
             #Adding read and execute permisiion for head
             setfacl -dm u:jay_jay:r-x /home/$1_$i
@@ -31,19 +31,19 @@ permit() {
 }
 
 #Permission group
-newgrp head
-newgrp sys_fourthyr
-newgrp web_fourthyr
-newgrp app_fourthyr
-newgrp sys_thirdyr
-newgrp web_thirdyr
-newgrp app_thirdyr
-newgrp sys_secondyr
-newgrp web_secondyr
-newgrp app_secondyr
+groupadd head
+groupadd sys_fourthyr
+groupadd web_fourthyr
+groupadd app_fourthyr
+groupadd sys_thirdyr
+groupadd web_thirdyr
+groupadd app_thirdyr
+groupadd sys_secondyr
+groupadd web_secondyr
+groupadd app_secondyr
 
 #Permission
-sudo adduser jay_jay head
-permit sysad
-permit appdev
-permit webdev
+sudo usermod -a -G head jay_jay
+permit sysad sys
+permit appdev app
+permit webdev web

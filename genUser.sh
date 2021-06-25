@@ -19,7 +19,7 @@ groupadd webdev
 
 #Adding Jay_Jay and users of 3 domains
 sudo useradd -m jay_jay
-sudo usermod -a -G aplpha jay_jay
+sudo usermod -a -G alpha jay_jay
 genUser sysad
 genUser appdev
 genUser webdev
