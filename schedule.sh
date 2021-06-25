@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #function to copy schedule file to each user's directory
-function schedule{
+function schedule {
     for i in {01..30}
     do
         #dt="2021-07-14"
@@ -17,6 +17,6 @@ dt=$( date +%F )
 strings future.txt | grep  $dt | tee ./sdl.txt
 cp sdl.txt /home/jay_jay/schedule.txt
 
-schedule sysad sys
-schedule appdev app
-schedule webdev web
+schedule sysad
+schedule appdev
+schedule webdev
