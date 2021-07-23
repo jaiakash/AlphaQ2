@@ -7,5 +7,5 @@ AlphaQ wants to shift operations to the new headquarters. But manually shifting 
 
 ## Superuser Mode
 #### Create a database to store MOMs - Done
-#### Use docker-compose
+#### Use docker-compose - Done
 #### Restarting dont destroy data
