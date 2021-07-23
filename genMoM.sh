@@ -35,6 +35,6 @@ echo "You have to make mom for meeting" >> $fle
 echo "For date $dt" >> $fle
 echo $mssg >> $fle
 
-database_mssg = "For date $dt $mssg"
+database_mssg="For date $dt $mssg"
 #calling db_mom.py
 python3 ./db_mom.py $dt $database_mssg
