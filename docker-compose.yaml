@@ -1,0 +1,28 @@
+version: '3.8'
+
+services: 
+    db:
+        image: mysql
+        restart: always
+        # USER == root
+        # PASSWORD == toor
+        environment: 
+            MYSQL_ROOT_PASSWORD: toor
+
+        # save it to the Database
+        volumes: 
+            - dataBase:/var/lib/mysql
+        ports:
+            - 3307:3306
+    os:
+        depends_on: 
+            - db
+        build: .
+
+        # all files of user are saved
+        # on OS
+        volumes: 
+            - OS:/scripts/
+volumes: 
+    dataBase:
+    OS:
