@@ -12,6 +12,12 @@ RUN apt-get install -y acl
 #For Strings
 RUN apt-get install -y binutils
 
+#mysql, pip and python
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
+RUN apt install -y mysql-server
+RUN pip install mysql-connector-python
+
 # All scipts as executable
 #RUN chmod +x ./script.sh
 #RUN chmod +x ./attendance.sh
